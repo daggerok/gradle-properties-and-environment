@@ -1,2 +1,17 @@
 rootProject.name = 'gradle-build-profiles-plugin'
 
+/**
+ * Dynamically include all SoapUI sub-projects from SoapUI root project directory
+ */
+
+def subModulesRoot = 'modules-root'
+//def ignore = ['.idea', '.settings', 'env', 'ext']
+def ignore = file('.gitignore').readLines() + ['env', 'ext']
+def soapUiProjects = file(subModulesRoot)
+        .listFiles()
+        .findAll({ it.isDirectory() })
+        .findAll({ !ignore.contains(it.name) })
+
+soapUiProjects.each { File soapUiProjectDir ->
+    include "$subModulesRoot:$soapUiProjectDir.name"
+}

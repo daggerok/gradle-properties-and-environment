@@ -1,7 +1,7 @@
 buildscript {
     ext {
-        environmentFileDir = 'env'
         propertiesPluginEnvironmentNameProperty = 'env'
+        environmentFileDir = 'env'
     }
 }
 
@@ -14,4 +14,4 @@ configure(allprojects) {
     version '0.0.1'
 }
 
-println("env prop: $prop")
+println("root-project $project.name: $prop")

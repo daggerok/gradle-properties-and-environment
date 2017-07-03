@@ -1,12 +1,18 @@
 = gradle-properties-and-environment
 
-this repository demonstrates how easy introduce properties and profiles into gradle build in simple non multi-project build
+this repository demonstrates how easy introduce properties and profiles into gradle build in complex multi-project build
 
 [source,bash,fish]
 ----
 gradle init
-env prop: local
+root-project gradle-build-profiles-plugin: local
+sub-project modules-root: local
+sub-sub-project module-1: local
+sub-sub-project module-2: local
 
 gradle -Penv=jenkins init
-env prop: cloud
+root-project gradle-build-profiles-plugin: cloud
+sub-project modules-root: cloud
+sub-sub-project module-1: cloud
+sub-sub-project module-2: cloud
 ----
