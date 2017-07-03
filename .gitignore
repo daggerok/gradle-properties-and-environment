@@ -1,9 +1,10 @@
-**/.DS_Store
-**/.gradle/
-**/gradle/
-**/build/
-**/gradlew*
-**/.idea/
+.DS_Store
+.gradle
+gradle
+build
+gradlew
+gradlew.bat
+.idea
 **/*.ipr
 **/*.iml
 **/*.iws
