@@ -1,0 +1,12 @@
+= gradle-properties-and-environment
+
+this repository demonstrates how easy introduce properties and profiles into gradle build
+
+[source,bash,fish]
+----
+gradle init
+env prop: local
+
+gradle -Penv=jenkins init
+env prop: cloud
+----

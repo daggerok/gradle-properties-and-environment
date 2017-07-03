@@ -1,0 +1,17 @@
+buildscript {
+    ext {
+        environmentFileDir = 'env'
+        propertiesPluginEnvironmentNameProperty = 'env'
+    }
+}
+
+plugins {
+    id "net.saliman.properties" version "1.4.6"
+}
+
+configure(allprojects) {
+    group 'daggerok'
+    version '0.0.1'
+}
+
+println("env prop: $prop")
