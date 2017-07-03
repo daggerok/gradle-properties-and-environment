@@ -5,7 +5,6 @@ rootProject.name = 'gradle-build-profiles-plugin'
  */
 
 def subModulesRoot = 'modules-root'
-//def ignore = ['.idea', '.settings', 'env', 'ext']
 def ignore = file('.gitignore').readLines() + ['env', 'ext']
 def soapUiProjects = file(subModulesRoot)
         .listFiles()
