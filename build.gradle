@@ -14,4 +14,4 @@ configure(allprojects) {
     version '0.0.1'
 }
 
-println("root-project $project.name: $prop")
+println "root-project $project.name: $prop"
