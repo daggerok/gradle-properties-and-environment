@@ -1,1 +1,1 @@
-println("sub-sub-project $project.name: $prop")
+println "sub-sub-project $project.name: $prop"
