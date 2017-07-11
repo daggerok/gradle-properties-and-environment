@@ -1,17 +1,22 @@
 buildscript {
-    ext {
-        propertiesPluginEnvironmentNameProperty = 'env'
-        environmentFileDir = 'env'
-    }
+  ext {
+    propertiesPluginEnvironmentNameProperty = 'env'
+    environmentFileDir = 'env'
+  }
+  repositories {
+    mavenLocal()
+    jcenter()
+    maven { url 'https://plugins.gradle.org/m2/' }
+    maven { url 'http://smartbearsoftware.com/repository/maven2/' }
+  }
 }
 
 plugins {
-    id "net.saliman.properties" version "1.4.6"
+  id 'net.saliman.properties' version '1.4.6'
+  id 'org.urbanbyte.soapui' version '0.4.3' apply false
 }
 
 configure(allprojects) {
-    group 'daggerok'
-    version '0.0.1'
+  group 'daggerok'
+  version '0.0.1'
 }
-
-println "root-project $project.name: $prop"
