@@ -1,18 +1,8 @@
-= gradle-properties-and-environment
+= gradle-soapui-properties-and-environment image:https://travis-ci.org/daggerok/gradle-properties-and-environment.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/gradle-properties-and-environment"]
 
 this repository demonstrates how easy introduce properties and profiles into gradle build in complex multi-project build
 
 [source,bash,fish]
 ----
-gradle init
-root-project gradle-build-profiles-plugin: local
-sub-project modules-root: local
-sub-sub-project module-1: local
-sub-sub-project module-2: local
-
-gradle -Penv=jenkins init
-root-project gradle-build-profiles-plugin: cloud
-sub-project modules-root: cloud
-sub-sub-project module-1: cloud
-sub-sub-project module-2: cloud
+gradle -Penv=github soaptest
 ----
