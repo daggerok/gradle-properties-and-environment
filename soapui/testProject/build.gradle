@@ -1,0 +1,7 @@
+soapui {
+  test {
+    testSuite = [
+        'TestSuite',
+    ]
+  }
+}

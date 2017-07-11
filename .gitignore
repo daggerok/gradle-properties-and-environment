@@ -8,3 +8,5 @@ gradlew.bat
 **/*.ipr
 **/*.iml
 **/*.iws
+env
+!env/gradle-*.properties
