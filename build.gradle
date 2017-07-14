@@ -2,18 +2,21 @@ buildscript {
   ext {
     propertiesPluginEnvironmentNameProperty = 'env'
     environmentFileDir = 'env'
+    soapUiVersion = '5.1.0'
   }
   repositories {
     mavenLocal()
-    jcenter()
     maven { url 'https://plugins.gradle.org/m2/' }
     maven { url 'http://smartbearsoftware.com/repository/maven2/' }
+    jcenter()
+  }
+  dependencies {
+    classpath("gradle.plugin.io.byteshifter:soapui-gradle-plugin:$soapUiVersion")
   }
 }
 
 plugins {
   id 'net.saliman.properties' version '1.4.6'
-  id 'org.urbanbyte.soapui' version '0.4.3' apply false
 }
 
 configure(allprojects) {

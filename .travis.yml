@@ -15,9 +15,9 @@ before_install:
   - mkdir -p "$HOME/.sdkman/etc"
   - source "$HOME/.sdkman/bin/sdkman-init.sh"
 script:
-  - gradle -Penv=github soaptest
-  - gradle --stop
+  - gradle -Penv=github soapui:testProject:soaptest
 before_cache:
+  - gradle --stop
   - rm -rf $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -rf $HOME/.gradle/caches/*/plugin-resolution
 cache:

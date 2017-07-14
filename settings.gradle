@@ -5,7 +5,7 @@ rootProject.name = 'gradle-build-profiles-plugin'
  */
 
 def soapUiRoot = 'soapui'
-def ignore = file('.gitignore').readLines() + ['ext']
+def ignore = file('.gitignore').readLines()
 def soapUiProjects = file(soapUiRoot).listFiles()
                                      .findAll({ it.isDirectory() })
                                      .findAll({ !ignore.contains(it.name) })

@@ -10,3 +10,5 @@ gradlew.bat
 **/*.iws
 env
 !env/gradle-*.properties
+ext
+!ext/.gitkeep

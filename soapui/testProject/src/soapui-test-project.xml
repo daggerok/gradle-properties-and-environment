@@ -78,6 +78,35 @@
       </con:testStep>
       <con:properties/>
     </con:testCase>
+    <con:testCase id="17c8a748-15fb-41d0-a775-42ceadf6283c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Copy of TestCase" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="restrequest" name="GetRequest" id="24048b75-7930-4422-9854-4740d331c79c">
+        <con:settings/>
+        <con:config service="BaseApiEndpoint" resourcePath="/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GetRequest" id="29e173c3-1fd9-47a7-bec9-b49babe06ed2" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#apiEndpoint}</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/</con:originalUri>
+            <con:assertion type="Invalid HTTP Status Codes" id="fdaf073d-33b0-4f16-9e76-923e93d94d0f" name="Invalid HTTP Status Codes">
+              <con:configuration>
+                <codes>500</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
     <con:properties/>
   </con:testSuite>
   <con:properties>

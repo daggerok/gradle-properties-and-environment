@@ -1,7 +1,12 @@
-soapui {
-  test {
-    testSuite = [
-        'TestSuite',
-    ]
+import io.byteshifter.plugins.soapui.tasks.TestTask
+
+[
+    'TestSuite',
+    'Copy of TestSuite',
+
+].each { suite ->
+
+  tasks.create(name: suite, type: TestTask) {
+    testSuite = suite
   }
 }
