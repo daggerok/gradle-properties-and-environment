@@ -2,7 +2,7 @@ buildscript {
   ext {
     propertiesPluginEnvironmentNameProperty = 'env'
     environmentFileDir = 'env'
-    soapUIVersion = '5.1.0'
+    soapUIVersion = '5.1.1'
   }
   repositories {
     mavenLocal()
