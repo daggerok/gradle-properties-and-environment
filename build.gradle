@@ -2,7 +2,7 @@ buildscript {
   ext {
     propertiesPluginEnvironmentNameProperty = 'env'
     environmentFileDir = 'env'
-    soapUiVersion = '5.1.0'
+    soapUIVersion = '5.1.0'
   }
   repositories {
     mavenLocal()
@@ -11,7 +11,7 @@ buildscript {
     jcenter()
   }
   dependencies {
-    classpath("gradle.plugin.io.byteshifter:soapui-gradle-plugin:$soapUiVersion")
+    classpath("gradle.plugin.io.byteshifter:soapui-gradle-plugin:$soapUIVersion")
   }
 }
 

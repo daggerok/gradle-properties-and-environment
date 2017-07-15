@@ -3,7 +3,8 @@ def soapUiRoot = projectDir.absolutePath.replaceAll('\\\\', '/')
 
 configure(subprojects) { project ->
 
-  apply plugin: 'io.byteshifter.soapui'
+  // apply plugin: 'io.byteshifter.soapui'
+  apply plugin: io.byteshifter.plugins.soapui.SoapUIPlugin
 
   soapui {
     test {
